@@ -1,0 +1,169 @@
+.whole{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background:rgba(249,249,249,1);
+}
+
+
+
+.texteare{
+  height: 150rpx;
+  width: 100%;
+  background:rgba(255, 255, 255, 1);
+  padding: 20rpx 30rpx;
+  margin-top: 20rpx;
+}
+.texteare textarea{
+  font-size:26rpx;
+  font-family:SourceHanSansCN-Regular;
+  width: 690rpx;
+  height: 100%;
+}
+.placeholderclass{
+  font-size:26rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(156,162,187,1);
+}
+
+
+
+.addimg{
+  height: 380rpx;
+  width: 100%;
+  background:rgba(255, 255, 255, 1);
+  padding: 20rpx 30rpx;
+  margin-top: 20rpx;
+
+  display: flex;
+  flex-direction: column;
+}
+.tiptext{
+  display: flex;
+  flex-direction: column;
+}
+.tiptittle{
+  font-size:30rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+.tipcontent{
+  font-size:24rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(156,162,187,1);
+
+  margin-top: 10rpx;
+}
+.addperview{
+  width: 690rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.addphoto{
+  width: 105rpx;
+  height: 105rpx;
+  padding: 10rpx;
+  background:rgba(249,249,249,1);
+  border:1px solid rgba(238,238,238,1);
+  border-radius:5rpx;
+  margin-right: 10rpx;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.addphoto image{
+  width: 40rpx;
+  height: 40rpx;
+
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+}
+.addphoto text{
+  font-size:20rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+}
+.addperviewimg{
+  margin-right: 10rpx;
+  position:relative;
+}
+.perviewimg{
+  width: 128rpx;
+  height: 128rpx;
+}
+.deleteimg{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.publishto{
+  height: 170rpx;
+  width: 100%;
+  background:rgba(255, 255, 255, 1);
+  padding: 20rpx 30rpx;
+  margin-top: 20rpx;
+}
+.radio-group{
+  margin-top: 10rpx;
+}
+radio .wx-radio-input{ 
+  /* 自定义样式.... */
+    height: 34rpx; 
+    width: 34rpx;
+    border-radius: 50%;
+    border: 2rpx solid #999;
+    background: transparent;
+ }
+.radiotext{
+  font-size:26rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(156,162,187,1);
+}
+.radiotextchecked{
+  color:rgba(58,71,219,1);
+}
+
+
+
+.publishbtn{
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 80rpx;
+  margin-bottom: 80rpx;
+}
+.btn1{
+  width:300rpx;
+  height:88rpx;
+  font-size:32rpx;
+  font-family:SourceHanSansCN-Medium;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  background:#3B49E0;
+  border-radius:44px;
+}
+.btn2{
+  width:300rpx;
+  height:88rpx;
+  font-size:32rpx;
+  font-family:SourceHanSansCN-Medium;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  background:#3B49E0;
+  border-radius:44px;
+}
+
+
+

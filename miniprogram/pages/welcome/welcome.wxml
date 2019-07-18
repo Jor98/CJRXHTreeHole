@@ -1,0 +1,6 @@
+<view class="container">
+  <image class="topimage" src='{{welcomeimg}}'></image>
+  <text class="centertext">欢迎使用树洞小程序</text>
+  <button class="loginbtn" open-type="getUserInfo" 
+  bindgetuserinfo="getUserInfo">开始使用</button>
+</view>

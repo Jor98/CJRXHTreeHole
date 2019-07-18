@@ -1,0 +1,45 @@
+<view class="whole">
+  <view class="nav">
+  <scroll-view scroll-x>
+    <view bindtap="activeNav" data-index="{{index}}" class="nav_item {{index===currentIndexNav?'active':''}}" wx:for="{{navList}}" wx:key="{{index}}">
+    {{item.text}}
+    </view>
+  </scroll-view>
+  </view>
+  
+  <view class="main" wx:if="{{currentIndexNav===0 && canshow}}">
+    <view class="blank" wx:if="{{commentDocList.length == 0}}"><image src="../../images/blank.png"></image></view>
+    <view class="record" wx:for="{{commentDocList}}" wx:key="_id">
+      <view class="time_area" >{{item.upTime}}<icon class="pink_dot" wx:if="{{item.firstRead}}"></icon></view>
+      <view class="comments">
+        <view class="comments_nick">{{item.reviewerName}}:</view>
+        <view class="comments_content">{{item.comments}}</view>
+      </view>
+      <view class="myholetree" bindtap='gotoTopicDetials' data-recordid='{{item.recordId}}'>
+        <image class="holetree_img" src="{{item.firstImageUrl}}" wx:if="{{item.firstImageUrl}}"></image>
+        <view class="{{item.firstImageUrl?'has_img_holetree_content':'holetree_content'}}">{{item.summary}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="main" wx:if="{{currentIndexNav===1 && canshow}}">
+    <view class="blank" wx:if="{{commentDocList.length == 0}}"><image src="../../images/blank.png"></image></view>
+    <view class="record" wx:for="{{commentDocList}}" wx:key="_id">
+      <view class="record_top">
+        <view class="time_area">{{item.upTime}}</view>
+        <view class="deletebtn" data-id="{{item._id}}" data-recordid="{{item.recordId}}" bindtap="deleteComment">删除</view>
+      </view>
+      <view class="comments">
+        <view class="comments_content">{{item.comments}}</view>
+      </view>
+      <view class="myholetree" bindtap='gotoTopicDetials' data-recordid='{{item.recordId}}'>
+        <image class="holetree_img" src="{{item.firstImageUrl}}" wx:if="{{item.firstImageUrl}}"></image>
+        <view class="{{item.firstImageUrl?'comments_block':''}}">
+          <view class="comments_nick">{{item.byReviewerName}}:</view>
+          <view class="{{item.firstImageUrl?'has_img_holetree_content':'holetree_content'}}">{{item.summary}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

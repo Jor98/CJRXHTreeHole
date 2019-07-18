@@ -1,0 +1,11 @@
+<view class='comment-container'>
+  <view class='user-date-container'>
+    <view class='user'>
+      <image src='{{comment.reviewerIcon}}'></image>
+      <text>{{comment.reviewerName}}</text>
+    </view>
+    <text class='date'>{{comment.upTime}}</text>
+  </view>
+  <text class='content'>{{comment.comments}}</text>
+  <text class='delete' wx:if='{{comment._openid == localOpenId}}' catch:tap='deleteComment' data-id='{{comment._id}}' data-recordid='{{comment.recordId}}'>{{deleteString}}</text>
+</view>

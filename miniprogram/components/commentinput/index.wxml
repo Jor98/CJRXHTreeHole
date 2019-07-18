@@ -1,0 +1,11 @@
+<form bindsubmit='publish'>
+  <view class='input-container'>
+    <view class='input-title'>
+      <image src='/images/ai.png'></image>
+      <text wx:if="{{informations.contentdetail.publisher}}">{{informations.contentdetail.publisher}}</text>
+      <text wx:if="{{replyComm.byreviewInfo.reviewerName}}">{{replyComm.byreviewInfo.reviewerName}}</text>
+    </view>
+    <textarea name='content' class='input-content' auto-height='true' maxlength='-1' auto-focus='true' cursor-spacing='50' ></textarea>
+    <button class='input-confirm' form-type='submit'>发布</button>
+  </view>
+</form>

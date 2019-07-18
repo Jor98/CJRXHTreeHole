@@ -1,0 +1,40 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="whole">
+    <view class="texteare">
+      <textarea name="content" placeholder="请填写话题内容" placeholder-class="placeholderclass"></textarea>
+    </view>
+
+    <view class="addimg">
+      <view class="tiptext">
+        <view class="tiptittle">添加图片</view>
+        <view class="tipcontent">图片最多不超过9张</view>
+      </view>
+
+      <view class="addperview">
+        <view class="addphoto" bindtap='chooseImages'>
+          <image src="../../images/camera.png"></image>
+          <text>添加图片</text>
+        </view>
+        <view wx:for="{{imageList}}" wx:key="*this" class="addperviewimg">
+          <image src="{{item}}" class="perviewimg"></image>
+          <image src="../../images/deleteimg.png" class="deleteimg" data-id="{{index}}" bindtap='deleteImage'></image>
+        </view> 
+      </view>
+    </view>
+
+    <view class="publishto">
+      <view class="tiptittle">发布到</view>
+      <radio-group name="visibility" class="radio-group">
+        <view wx:for="{{radioitems}}" wx:key="value">
+          <radio bindtap="checkedradio" value="{{item.value}}" data-value="{{item.value}}" checked="{{item.checked}}" color="#3A47DB" />
+          <text bindtap='clickRadio' data-value="{{item.value}}"  class="radiotext {{item.value===currentvalue?'radiotextchecked':''}}">{{item.text}}</text>
+        </view>
+      </radio-group>
+    </view>
+
+    <view class="publishbtn">
+      <button class="btn1" formType="submit">发布</button>
+      <button class="btn2" formType="reset">重置</button>
+    </view>
+  </view>
+</form>

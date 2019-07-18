@@ -1,0 +1,13 @@
+<view class="messcontainer">
+  <view class="items" bindtap="goComments">
+    <image class="icon" src="../../images/comments.png"></image>
+    <text class="text">评论</text>
+    <text class="messcount" hidden="{{newCommentsCount===0}}">{{newCommentsCount}}</text>
+  </view>
+
+  <view class="items" bindtap="goThumbup">
+    <image class="icon" src="../../images/thumbup.png"></image>
+    <text class="text">点赞</text>
+    <text class="messcount" hidden="{{newThumbupCount===0}}">{{newThumbupCount}}</text>
+  </view>
+</view>

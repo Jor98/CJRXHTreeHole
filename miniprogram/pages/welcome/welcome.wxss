@@ -1,0 +1,28 @@
+.topimage{
+  width: 144rpx;
+  height: 144rpx;
+  margin-top: 200rpx;
+}
+
+.centertext{
+  font-size:32rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:36rpx;
+  margin-top: 40rpx;
+}
+
+.loginbtn{
+  width:260rpx;
+  height:88rpx;
+  background-color: #313EC9;
+  box-shadow:0px 0px 30px 0px rgba(49, 201, 62, 0.35);
+  border-radius:44px;
+
+  font-size:32rpx;
+  font-family:SourceHanSansCN-Medium;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  margin-top: 400rpx;
+}

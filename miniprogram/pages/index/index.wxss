@@ -1,0 +1,195 @@
+.nav{
+  display: flex;
+  align-items:center;
+}
+.nav_item{
+  padding: 10rpx 0rpx;
+  margin-left: 70rpx;
+
+  font-size:30rpx;
+  font-family:PingFang-SC-Medium;
+  color:rgba(156,162,187,1);
+  display: inline-block;
+}
+.nav_item.active{
+  font-size:34rpx;
+  font-family:PingFang-SC-Bold;
+  color:rgba(59,73,224,1);
+  border-bottom: 5rpx solid rgba(59,73,224,1);
+}
+
+
+
+.mainview{
+  height: auto;
+  width: 100%;
+  background:rgba(249,249,249,1);
+}
+.blank{
+  padding: 100rpx 50rpx;
+  background:rgba(255,255,255,1);
+}
+.blank image{
+  height: 700rpx;
+}
+.information{
+  width: 100%;
+  background:rgba(255,255,255,1);
+  padding:30rpx 40rpx;
+  margin-bottom: 30rpx;
+
+  display: flex;
+}
+.useravatar{
+  width: 14%;
+}
+.userimg{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+.userinformation{
+  width: 72%;
+  margin-left: 20rpx;
+}
+.information_top{
+  margin-top: 10rpx;
+
+  display: flex;
+  align-items:baseline;
+  justify-content:space-between;
+}
+.username{
+  font-size:34rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+.visibility_public{
+  margin-left: 10rpx;
+  width:80rpx;
+  height: 40rpx;
+  text-align: center;
+  font-size: 24rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color: rgba(255, 255, 255, 1);
+  background: rgb(99, 141, 255);
+  line-height: 40rpx;
+  border-radius:8rpx;
+}
+.visibility_private{
+  margin-left: 10rpx;
+  width:80rpx;
+  height: 40rpx;
+  text-align: center;
+  font-size: 24rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color: rgba(255, 255, 255, 1);
+  background: rgb(255, 99, 99);
+  line-height: 40rpx;
+  border-radius:8rpx;
+}
+.date{
+  font-size:26rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(156,162,187,1);
+}
+.deletebtn{
+  width:100rpx;
+  height:40rpx;
+  margin-top: 6rpx;
+  border:1px solid rgba(156,162,187,1);
+  border-radius:10rpx;
+
+  text-align: center;
+  font-size:28rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(156,162,187,1);
+  line-height:40rpx;
+}
+.changebtn_public{
+  margin-right: 10rpx;
+  width:140rpx;
+  height:40rpx;
+  margin-top: 6rpx;
+  border:1px solid rgb(255, 99, 99);
+  border-radius:10rpx;
+
+  text-align: center;
+  font-size:28rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgb(255, 99, 99);
+  line-height:40rpx;
+}
+.changebtn_private{
+  margin-right: 10rpx;
+  width:140rpx;
+  height:40rpx;
+  margin-top: 6rpx;
+  border:1px solid rgb(99, 141, 255);
+  border-radius:10rpx;
+
+  text-align: center;
+  font-size:28rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgb(99, 141, 255);
+  line-height:40rpx;
+}
+.information_text{
+  padding:10rpx 0rpx;
+  margin: 10rpx 0rpx;
+  font-size:30rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(102,102,102,1);
+  line-height:34rpx;
+}
+.information_images{
+  display: flex;
+  flex-wrap: wrap;
+}
+.images_item{
+  width: 170rpx;
+  height: 170rpx;
+
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.comments_thumbsup{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content:space-between;
+}
+.flex_end{
+  display: flex;
+  justify-content: flex-end;
+}
+.flex_row{
+  display: flex;
+  align-items: center;
+}
+.comments{
+  margin-right: 50rpx;
+}
+
+.comments_thumbsup image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.comments_thumbsup text{
+  font-size:30rpx;
+  font-family:SourceHanSansCN-Regular;
+  font-weight:400;
+  color:rgba(156,162,187,1);
+  margin-right: 10rpx;
+}
+
+

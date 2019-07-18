@@ -1,0 +1,86 @@
+<!--index.wxml-->
+<view>
+  <view class="nav">
+  <scroll-view scroll-x>
+    <view bindtap="activeNav" data-index="{{index}}" class="nav_item {{index===currentIndexNav?'active':''}}" wx:for="{{navList}}" wx:key="{{index}}">
+    {{item.text}}
+    </view>
+  </scroll-view>
+  </view>
+
+  <view class="mainview" wx:if="{{currentIndexNav===0 && canshow}}" >
+
+  <scroll-view scroll-y>
+    <view class="blank" wx:if="{{uploadDocList.length == 0}}"><image src="../../images/blank.png"></image></view>
+    <view class="information" wx:for="{{uploadDocList}}" wx:key="_id">
+      <view class="useravatar" catchtap='gotoTopicDetials' data-recordid='{{item._id}}'>
+        <image class="userimg" src="{{item.icon}}"></image>
+      </view>
+      <view class="userinformation">
+        <view class="information_top" catchtap='gotoTopicDetials' data-recordid='{{item._id}}'>
+          <view class="username">{{item.publisher}}</view>
+          <view class="date">{{item.time}}</view>
+        </view>
+        <view class="information_text" catchtap='gotoTopicDetials' data-recordid='{{item._id}}'>{{item.content}}</view>
+        <view class="information_images" wx:if="item.imageUrls">
+          <image class="images_item" wx:for="{{item.imageUrls}}" wx:for-item="images" wx:key="*this" src="{{images}}" bindtap="previewimg" data-urls="{{item.imageUrls}}" data-current="{{images}}"></image>
+        </view>
+ 
+        <view class="comments_thumbsup flex_end">
+          <view class='comments' bindtap='gotoTopicDetials' data-recordid='{{item._id}}'>
+            <image src="../../images/comments.png"></image>
+            <text>{{item.commentNum}}</text>
+          </view>
+          <view bindtap='onLikePublic' data-id='{{item._id}}'>
+            <image src="../../images/thumbup.png"></image>
+            <text>{{item.praiseNum}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+  </scroll-view>
+  </view>
+
+
+
+  <view class="mainview" wx:if="{{currentIndexNav===1 && canshow}}">
+  <scroll-view scroll-y>
+    <view class="blank" wx:if="{{uploadDocList.length == 0}}"><image src="../../images/blank.png"></image></view>
+    <view class="information" wx:for="{{uploadDocList}}" wx:key="_id"> 
+      <view class="useravatar" catchtap='gotoTopicDetials' data-recordid='{{item._id}}'>
+        <image class="userimg" src="{{item.icon}}"></image>
+      </view>
+      <view class="userinformation">
+        <view class="information_top" catchtap='gotoTopicDetials' data-recordid='{{item._id}}'>
+          <view class="flex_row">
+            <view class="username">{{item.publisher}}</view>
+            <view class="{{item.visibility?'visibility_public':'visibility_private'}}">{{item.visibility?'公开':'私有'}}</view>
+          </view>
+          <view class="date">{{item.time}}</view>
+        </view>
+        <view class="information_text" catchtap='gotoTopicDetials' data-recordid='{{item._id}}'>{{item.content}}</view>
+        <view class="information_images" wx:if="item.imageUrls">
+          <image class="images_item" wx:for="{{item.imageUrls}}" wx:for-item="images" wx:key="*this" src="{{images}}" bindtap="previewimg" data-urls="{{item.imageUrls}}" data-current="{{images}}"></image>
+        </view>
+        <view class="comments_thumbsup">
+          <view class="flex_row">
+            <view class="{{item.visibility?'changebtn_public':'changebtn_private'}}" bindtap='changeVisibility' data-id='{{item._id}}'data-visibility="{{item.visibility}}">{{item.visibility?'转为私有':'转为公开'}}</view>
+             <view class="deletebtn" bindtap='deleteUtteranceDoc' data-id='{{item._id}}' data-imageurls='{{item.imageUrls}}'>删除</view>
+          </view>
+          <view class="flex_row">
+            <view class='comments'>
+              <image src="../../images/comments.png"></image>
+              <text>{{item.commentNum}}</text>
+            </view>
+            <view bindtap='onLikePrivate' data-id='{{item._id}}'>
+              <image src="../../images/thumbup.png"></image>
+              <text>{{item.praiseNum}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  </view>
+</view>

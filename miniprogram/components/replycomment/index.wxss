@@ -1,0 +1,62 @@
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #fff;
+  margin-left: 98rpx;
+}
+
+.user-date-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0rpx 20rpx 0rpx 20rpx;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+}
+
+.user{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.user-photo {
+  width: 90rpx;
+  height: 90rpx;
+  margin-top:10rpx;
+  margin-right: 10rpx;
+  border-radius: 45rpx;
+}
+
+.user-name{
+  
+}
+
+.user-point{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.user-reply {
+
+}
+
+.date{
+  font-size: 20rpx;
+  font-weight: 400;
+}
+
+.content {
+  margin-left: 118rpx;
+  margin-right: 5rpx;
+  font-weight: 300;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+}
+
+.delete{
+  font-size: 30rpx;
+  color: #3B49E0;
+  text-align: right;
+  margin-right: 20rpx;
+  margin-bottom: 10rpx;
+}

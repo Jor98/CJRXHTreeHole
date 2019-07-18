@@ -1,0 +1,47 @@
+<view class="whole">
+  <view class="nav">
+  <scroll-view scroll-x>
+    <view bindtap="activeNav" data-index="{{index}}" class="nav_item {{index===currentIndexNav?'active':''}}" wx:for="{{navList}}" wx:key="{{index}}">
+    {{item.text}}
+    </view>
+  </scroll-view>
+  </view>
+  
+  <view class="main" wx:if="{{currentIndexNav===0 && canshow}}">
+    <view class="blank" wx:if="{{thumbupDocList.length == 0}}"><image src="../../images/blank.png"></image></view>
+    <view class="record" wx:for="{{thumbupDocList}}" wx:key="_id">
+      <view class="time_area">{{item.time}}<icon class="pink_dot" wx:if="{{item.first}}"></icon></view>
+      <view class="comments">
+        <view class="thumbup_nick">{{item.clickUserName}}<text>赞了你的话题</text></view>
+      </view>
+      <view class="myholetree" bindtap='gotoTopicDetials' data-recordid='{{item.recordId}}'>
+        <image class="holetree_img" wx:if="{{item.firstImage}}" src="{{item.firstImage}}" ></image>
+        <view class="{{item.firstImage?'has_img_holetree_content':'holetree_content'}}">{{item.summary}}</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="main" wx:if="{{currentIndexNav===1  && canshow}}">
+    <view class="blank" wx:if="{{thumbupDocList.length == 0}}"><image src="../../images/blank.png"></image></view>
+    <view class="record" wx:for="{{thumbupDocList}}" wx:key="_id">
+      <view class="record_top">
+        <view class="time_area">{{item.time}}</view>
+        <view class="deletebtn" bindtap='cancelPraise' data-id='{{item._id}}' data-recordid='{{item.recordId}}' data-clickuserid='{{item.clickUserId}}'>取消点赞</view>
+      </view>
+      <view class="comments">
+        <view class="comments_content">我点赞了<text>{{item.recordUserName}}</text>的话题</view>
+      </view>
+      <view class="myholetree" bindtap='gotoTopicDetials' data-recordid='{{item.recordId}}'>
+        <image class="holetree_img" wx:if="{{item.firstImage}}" src="{{item.firstImage}}"></image>
+        <view class="{{item.firstImage?'comments_block':''}}">
+          <view class="comments_nick">{{item.recordUserName}}</view>
+          <view class="{{item.firstImage?'has_img_holetree_content':'holetree_content'}}">{{item.summary}}</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  
+  
+</view>

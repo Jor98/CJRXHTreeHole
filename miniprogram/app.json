@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/message/message",
+    "pages/publishTopics/publishTopics",
+    "pages/comments/comments",
+    "pages/thumbup/thumbup",
+    "pages/topicDetials/topicDetials"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "树洞",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#9CA2BB",
+    "selectedColor": "#3B49E0",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "./images/home_select.png",
+        "iconPath": "./images/home.png",
+        "pagePath": "pages/index/index",
+        "text": "树洞"
+      },
+      {
+        "selectedIconPath": "./images/publish_topics.png",
+        "iconPath": "./images/publish_topics.png",
+        "pagePath": "pages/publishTopics/publishTopics",
+        "text": "发布话题"
+      },
+      {
+        "selectedIconPath": "./images/message_select.png",
+        "iconPath": "./images/message.png",
+        "pagePath": "pages/message/message",
+        "text": "消息"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
+

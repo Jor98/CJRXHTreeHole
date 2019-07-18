@@ -1,0 +1,34 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  margin-right: 35rpx;
+  height: 300rpx;
+  /* 蒙层效果 */
+}
+
+.input-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15rpx;
+  margin-bottom: 10rpx;
+}
+
+.input-title image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.input-content{
+  border: 2px solid rebeccapurple;
+  width: 100%;
+}
+
+.input-confirm{
+  text-align: right;
+  line-height: 70rpx;
+  color: #3B49E0;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+}

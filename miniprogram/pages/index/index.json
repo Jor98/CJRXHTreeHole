@@ -1,0 +1,13 @@
+{
+  "usingComponents": {},
+
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "树洞",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 0
+
+}

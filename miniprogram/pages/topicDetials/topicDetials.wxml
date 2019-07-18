@@ -1,0 +1,62 @@
+<!--topicDetial.wxml-->
+<view>
+  <view class="mainview">
+    <scroll-view enable-back-to-top='true' scroll-y='true'>
+      <view class="information">
+        <view class="useravatar">
+          <image class="userimg" src='{{contentdetail.icon}}'></image>
+        </view>
+        <view class="userinformation">
+          <view class="information_top">
+            <view class="username">{{contentdetail.publisher}}</view>
+            <view class="date">{{contentdetail.time}}</view>
+          </view>
+          <view class="information_text">{{contentdetail.content}}</view>
+
+          <!-- 图片循环 -->
+          <view class="information_images">
+            <block wx:for='{{contentdetail.imageUrls}}' wx:key='item'>
+              <image class="images_item" src='{{item}}' bindtap="previewimg" data-urls="{{contentdetail.imageUrls}}" data-current="{{item}}"></image>
+            </block>
+          </view>
+
+          <!-- 评论与点赞个数 -->
+          <view class="comments_thumbsup">
+            <view class='comments'>
+              <image src="../../images/comments.png"></image>
+              <text>{{commNum}}</text>
+            </view>
+            <view bindtap='onLikePublic'>
+              <image src="../../images/thumbup.png"></image>
+              <text>{{contentdetail.praiseNum}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- <text>留言评论区</text> -->
+      <view class='comments-container'>
+
+        <block wx:for='{{commentList}}' wx:key='{{_id}}' wx:for-item="one">
+          <v-comment bind:tap='jump' catch:myDelComment='myDelete' comment='{{one}}' localOpenId='{{openId}}' data-commid='{{one._id}}'/>
+          <!-- 二级评论循环 -->
+          <block wx:for='{{one.subCommentList}}' wx:key='{{_id}}' wx:for-item="second">
+            <v-reply bind:tap='jump' localOpenId='{{openId}}' catch:myDelComment='deleteSecondary' comment='{{second}}' data-childid='{{second._id}}' data-parentid='{{one._id}}' />
+          </block>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 写评论区入口 -->
+  <view class='write-container' wx:if='{{!jumpflag}}'>
+    <view>
+      <image class='reply-photo' src='{{userInfo.avatarUrl}}'></image>
+    </view>
+    <view class='write-icon'>
+      <image class='icon' src='/images/write.png'></image>
+      <text class='write' bind:tap='jump' data-commid='{{"-1"}}'>友善的评论是交流的起点</text>
+    </view>
+  </view>
+  <!-- 弹出评论区 -->
+  <v-input wx:else bind:commentinput='publish' informations='{{mainTopicComm}}' replyComm='{{replyComm}}' />
+</view>
